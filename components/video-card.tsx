@@ -10,8 +10,8 @@ const VideoCard = ({ video }: any) => {
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
             <div className="relative">
                 <Link
-                    href={`/v/${video.file_code}`}
-                    title={`Bokep ${video.title}`}
+                    href={`/v/${video.file_code}#${video.title}`}
+                    title={`Watch ${video.title}`}
                     >
                 <Thumbnail
                     single_img={video.single_img}
@@ -22,11 +22,11 @@ const VideoCard = ({ video }: any) => {
             </div>
             <CardContent className="p-1.5"><h3>
                 <Link
-                    href={`/v/${video.file_code}`}
+                    href={`/v/${video.file_code}#${video.title}`}
                     className="line-clamp-2 text-sm md:text-md font-semibold hover:text-primary focus:text-primary"
                     title={`Watch ${video.title}`}
                 >
-                    Bokep {video.title}
+                    {video.title}
                 </Link></h3>
             </CardContent>
         </Card>
